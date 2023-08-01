@@ -1,0 +1,47 @@
+// colors
+:root {
+  //base
+  --font-family: "Ubuntu", sans-serif;
+  --container-width: 1260px;
+  --container-offset: 15px;
+  // colors
+  --light-color: #fff;
+  --black-color: #000;
+  --grey-color: #424551;
+  --grey-dark: #1e212c;
+  --storm-color: #787A80;
+  --manatee-color: #9a9ca5;
+  --primary-color: #FF5A30;
+  --bright-gray: #e5e8ed;
+  --gainsboro-color: #d7dadd;
+  --cultured--color: #f4f5f6;
+  --color-active: #fc3300;
+
+  --main-shadow:
+    0 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 80px 80px -20px rgba(154, 156, 165, 0.08);
+
+  --main-hover-shadow:
+    0 4px 4px -4px rgba(30, 33, 44, 0.05),
+    0 12px 10px -6px rgba(30, 33, 44, 0.08),
+    0 26px 24px -10px rgba(30, 33, 44, 0.10),
+    0 60px 80px -20px rgba(30, 33, 44, 0.16);
+
+  --news-hover-shadow:
+    0px 4px 4px -4px rgba(30, 33, 44, 0.05),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.08),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.10),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.16);
+
+  --focus-shadow:
+    0 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0 12px 10px -6px rgba(255, 90, 48, 0.04),
+    0 30px 24px -10px rgba(255, 90, 48, 0.05),
+    0 80px 80px -20px rgba(255, 90, 48, 0.08);
+
+  --radius: 4px;
+
+  --grid-gap: 30px;
+}

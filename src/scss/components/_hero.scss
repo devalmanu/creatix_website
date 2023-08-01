@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  padding-top: 220px;
+  padding-bottom: 355px;
+  background-color: var(--grey-color);
+  background-image:url('../img/hero-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+  &:after {
+    content: '';
+    @include absolute-center;
+    background: linear-gradient(0deg, rgba(30, 33, 44, 0.60) 0%, rgba(30, 33, 44, 0.60) 100%);
+    z-index: 1;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  &__content {
+    max-width: 590px;
+  }
+
+  &__btns {
+    @include flex-v-center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+}

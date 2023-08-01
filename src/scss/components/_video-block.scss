@@ -1,0 +1,63 @@
+.video-block {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  height: 500px;
+
+  &:before {
+    content: '';
+    @include absolute-center;
+    background-color: rgba(30, 33, 44, 0.6);
+    z-index: 1;
+  }
+
+  &__content {
+    @include block;
+    @include image-fit;
+
+  }
+
+  &__play {
+    @include absolute-transform;
+    @include flex-all-center;
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: transparent;
+    transition: 0.3 ease-in-out;
+    z-index: 3;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    &:focus, &:hover {
+      background: rgba(255, 90, 48, 0.1);
+    }
+  }
+
+  &__muted {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    @include flex-all-center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.3 ease-in-out;
+    z-index: 3;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--light-color);
+    }
+
+    &:focus, &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

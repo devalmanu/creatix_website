@@ -1,0 +1,124 @@
+.recent {
+  &-news {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    position: relative;
+    background-color: var(--light-color);
+    z-index: 1;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 255px);
+      gap: var(--grid-gap);
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      grid-column: 5 span;
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--light-color);
+      box-shadow: var(--main-shadow);
+      transition: box-shadow 0.3s ease-in-out;
+      &:hover {
+        box-shadow: var(--news-hover-shadow);
+      }
+
+      &:first-child {
+        grid-column: 7 span;
+        grid-row: 2 span;
+      }
+      &:not(:first-child) {
+        .recent-article__title {
+          margin-bottom: 8px;
+        }
+        .recent-article__content {
+          padding: 16px 24px 24px;
+        }
+      }
+
+    }
+  }
+
+  &-article {
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    &--small {
+      .recent-article__descr {
+        display: none;
+      }
+    }
+
+    &__content {
+      padding: 22px 24px 25px;
+    }
+
+    &__title {
+      margin: 0;
+      margin-bottom: 12px;
+      color: var(--grey-dark);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+      a {
+        color: inherit;
+      }
+    }
+
+    &__descr {
+      color: var(--grey-color);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 16px;
+    }
+  }
+}
+
+.article-meta {
+  color: var(--storm-color);
+  font-size: 14px;
+  line-height: 1.5;
+  &__item {
+    position: relative;
+    color: inherit;
+    &::after {
+      content: '';
+      position: absolute;
+      right: -13px;
+      top: 2px;
+      width: 1px;
+      height: 11px;
+      color: inherit;
+      background-color: currentColor;
+    }
+
+    &--comments {
+      padding-left: 24px;
+      background-image: url('../img/news-chat.svg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 16px 16px;
+      &::after {
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
+}

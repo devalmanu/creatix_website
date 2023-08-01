@@ -1,0 +1,41 @@
+.we-offer {
+  padding: 120px 0;
+  background-color: var(--color-light);
+
+  &__container {
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__image {
+    grid-column: 7 span;
+  }
+
+  &__content {
+    grid-column: 5 span;
+    padding-top: 5px;
+    padding-left: 75px;
+
+    @include tablet {
+      padding: 0;
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 55px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+  }
+
+  &__accordion {
+    &:not(:last-of-type) {
+      margin-bottom: 13px;
+    }
+
+  }
+
+}

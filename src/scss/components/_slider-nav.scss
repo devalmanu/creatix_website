@@ -15,6 +15,10 @@
       background-color: var(--primary-color);
       color: var(--light-color);
     }
+    &.swiper-button-disabled  {
+      opacity: 0.5;
+    }
+
   }
   svg {
     width: 24px;

@@ -178,7 +178,7 @@
 }
 
 .footer-nav {
-  display: flex;
+  @include flex;
   padding-top: 20px;
   padding-left: 54px;
 

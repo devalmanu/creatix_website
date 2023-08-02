@@ -325,10 +325,9 @@ button, a {
   right: calc((100% - 1230px) / 2);
   bottom: 80px;
   z-index: 1000;
-  display: flex;
+  @include flex;
   align-items: flex-end;
-  opacity: 0;
-  visibility: hidden;
+  @include opacity-hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   &__text {
@@ -339,15 +338,13 @@ button, a {
     text-transform: uppercase;
     color: var(--light-color);
     @include minitablet {
-      display: none;
+      @include none;
     }
   }
 
   &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
+    @include flex-all-center;
+    border-radius: var(--radius);
     width: 40px;
     height: 40px;
     background: var(--primary-color);
@@ -366,8 +363,7 @@ button, a {
   }
 
   &--active {
-    opacity: 1;
-    visibility: visible;
+    @include opacity-visible;
   }
 
   @include middledesk {

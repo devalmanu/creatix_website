@@ -1,26 +1,46 @@
-.mission {
-  padding-top: 120px;
-  background-color: var(--light-color);
+.services-benefits {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  background-color: var(--grey-dark);
+
+  &__title {
+    color: var(--light-color);
+  }
+
+  &__btn {
+    display: block;
+    width: 390px;
+    transform: translateY(55px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
   &__list {
     --mission-gap: 94px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 27px;
+    margin-bottom: 45px;
     gap: calc(var(--mission-gap) * 2);
 
-    // @include tablet {
-    //   --mission-gap: 30px;
-    // }
+    @include tablet {
+      --mission-gap: 30px;
+    }
 
-    // @include minitablet {
-    //   --mission-gap: 10px;
-    // }
+    @include minitablet {
+      --mission-gap: 10px;
+    }
 
-    // @include mobile {
-    //   display: block;
-    // }
+    @include mobile {
+      display: block;
+    }
   }
+
   &__item {
     @include flex-col-align-center;
     position: relative;
@@ -38,7 +58,7 @@
         rgba(218, 219, 221, 0.50) 12.33%, #DADBDD 51.91%,
         rgba(218, 219, 221, 0.50) 87.85%,
         rgba(218, 219, 221, 0.00) 100%);
-
+        opacity: 0.4;
         @include minitablet {
           display: none;
         }
@@ -58,6 +78,7 @@
       font-weight: 700;
       line-height: 1.5;
       margin-bottom: 8px;
+      color: var(--light-color);
     }
     p {
       margin: 0;
@@ -68,35 +89,3 @@
   }
 }
 
-.know-form {
-  position: relative;
-  top: 92px;
-  padding: 48px 60px;
-  border-radius: var(--radius);
-  box-shadow: var(--main-shadow);
-  background-color: var(--light-color);
-
-  &__content {
-    @include flex;
-    align-items: flex-end;
-  }
-
-  &__title {
-    margin: 0;
-    margin-bottom: 32px;
-    color: var(--grey-dark);
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-
-  &__field {
-    margin-right: 24px;
-  }
-
-  &__btn {
-    padding: 11px 32px;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-  }
-}

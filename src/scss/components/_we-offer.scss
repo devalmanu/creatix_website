@@ -10,6 +10,12 @@
 
   &__image {
     grid-column: 7 span;
+    max-height: 440px;
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
   }
 
   &__content {
@@ -25,7 +31,7 @@
 
   &__title {
     margin-bottom: 55px;
-    font-family: "Lato", sans-serif;
+    font-family: var(--font-Lato);
     font-weight: 900;
     font-size: 46px;
     line-height: 130%;

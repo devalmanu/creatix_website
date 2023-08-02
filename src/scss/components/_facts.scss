@@ -122,8 +122,7 @@
   }
 
   @include minitablet {
-    display: flex;
-    flex-direction: column;
+    @include flex-h-column;
     align-items: center;
   }
 }

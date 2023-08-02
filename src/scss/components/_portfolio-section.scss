@@ -3,9 +3,8 @@
   background-color: var(--light-color);
 
   &__top {
-    display: flex;
+    @include flex-w-between;
     align-items: flex-end;
-    justify-content: space-between;
     margin-bottom: 48px;
 
     @include mobile {
@@ -24,14 +23,12 @@
     margin: -100px;
 
     .swiper-slide {
-      opacity: 0;
-      visibility: hidden;
+      @include opacity-hidden;
       transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
     .swiper-slide-visible {
-      opacity: 1;
-      visibility: visible;
+      @include opacity-visible;
     }
 
     @include mobile {

@@ -12,5 +12,22 @@
     font-weight: 700;
     line-height: 1.6;
     color: var(--grey-color);
+
+    &:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
+    &--current {
+      color: var(--primary-color);
+    }
   }
 }

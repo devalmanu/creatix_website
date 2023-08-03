@@ -1,0 +1,33 @@
+.clients {
+  padding-top: 1%;
+  padding-bottom: 80px;
+  background: var(--light-color);
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 102px;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    @include flex-all-center;
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transition: filter 0.25s ease, opacity 0.25s ease;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+  }
+
+  &__link {
+    @include flex-all-center;
+  }
+}

@@ -32,7 +32,7 @@ if (portfolioTabs) {
     const target = e.target;
     if (target.classList.contains('portfolio-tabs-nav__btn')) {
       const path = target.dataset.path;
-
+      console.log(path)
       portfolioTabsBtns.forEach(el => { el.classList.remove('portfolio-tabs-nav__btn--active')});
       target.classList.add('portfolio-tabs-nav__btn--active');
 
@@ -67,7 +67,6 @@ if (portfolioTabs) {
     const visibleItems = document.querySelectorAll('.portfolio-tabs__item--visible');
 
     const path = document.querySelector('.portfolio-tabs-nav__btn--active').dataset.path;
-    console.log(path)
 
     if (path == 'all') {
       portfolioTabsItems.forEach(el => {
@@ -78,6 +77,7 @@ if (portfolioTabs) {
       document.querySelectorAll(`[data-target="${path}"]`).forEach(el => {
         el.closest('.portfolio-tabs__item').classList.add('portfolio-tabs__item--visible-more');
       });
+
       loadMore.style.display = 'none';
     }
   });

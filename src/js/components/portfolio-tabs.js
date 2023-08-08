@@ -32,7 +32,7 @@ if (portfolioTabs) {
     const target = e.target;
     if (target.classList.contains('portfolio-tabs-nav__btn')) {
       const path = target.dataset.path;
-      console.log(path)
+
       portfolioTabsBtns.forEach(el => { el.classList.remove('portfolio-tabs-nav__btn--active')});
       target.classList.add('portfolio-tabs-nav__btn--active');
 

@@ -2,7 +2,7 @@ import { disableScroll } from '../functions/disable-scroll';
 import { enableScroll } from '../functions/enable-scroll';
 
 const burger = document.querySelector('.burger');
-const menu = document.querySelector('.header__nav');
+const menu = document.querySelector('.header-nav__container');
 const overlay = document.querySelector('.overlay');
 
 const disScroll = () => {
@@ -25,7 +25,7 @@ const enScroll = () => {
 
 burger.addEventListener('click', (e) => {
   burger.classList.toggle('burger--active');
-  menu.classList.toggle('header__nav--active');
+  menu.classList.toggle('header-nav__container--active');
   overlay.classList.toggle('overlay--active');
 
   if (burger.classList.contains('burger--active')) {

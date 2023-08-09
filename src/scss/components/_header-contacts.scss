@@ -5,11 +5,17 @@
 
     &__link {
       @include flex-col-start;
-      @include mr(35px)
+      @include mr(35px);
+
+      @include tablet {
+        @include mr(0);
+        margin-bottom: 22px;
+      }
     }
 
     @include tablet {
-      display: none;
+      flex-direction: column;
+      align-items: flex-start
     }
 
     &--nav {
@@ -25,6 +31,16 @@
       background-position: left center;
       background-repeat: no-repeat;
       background-size: 40px 40px;
+
+      @include minidesk {
+        padding-left: 45px;
+        background-size: 35px 35px;
+      }
+
+      @include tablet {
+        padding-left: 38px;
+        background-size: 30px 30px;
+      }
 
       &__caption {
         font-size: 14px;

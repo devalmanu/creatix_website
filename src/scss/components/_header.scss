@@ -6,33 +6,10 @@
   }
 
   &__nav {
-    margin-left: -112px;
-
+    // margin-left: -112px;
+    margin-right: auto;
     @include minidesk {
       margin-left: 0;
-    }
-
-    @include tablet {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 1000;
-      display: block;
-      overflow-y: auto;
-      padding: 50px;
-      width: 84%;
-      height: 100vh;
-      background-color: var(--light-color);
-      transform: translateX(-150%);
-      transition: transform 0.3s ease-in-out;
-
-      &--active {
-        transform: none;
-      }
-    }
-
-    @include mobile {
-      padding: 20px;
     }
   }
 
@@ -46,6 +23,43 @@
     top: 0;
     width: 100%;
   }
+
+  &-nav__container {
+    width: calc(100% - 165px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    @include minidesk {
+      width: calc(100% - 140px);
+    }
+
+    @include tablet {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      display: block;
+      overflow-y: auto;
+      padding: 50px;
+      width: 85%;
+      height: 100vh;
+      background-color: var(--light-color);
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+      gap: 0;
+
+      &--active {
+        transform: none;
+      }
+    }
+
+    @include mobile {
+      width: calc(100% - 60px);
+      padding: 35px 25px;
+    }
+  }
 }
 
 .burger {
@@ -58,11 +72,14 @@
 }
 
 .logo {
+  margin-right: 65px;
   @include minidesk {
+    margin-right: 45px;
     max-width: 100px;
   }
 
   @include tablet {
+    margin-right: 20px;
     max-width: none;
   }
 

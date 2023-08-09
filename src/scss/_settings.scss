@@ -122,6 +122,7 @@ button, a {
   &--home {
     color: var(--light-color);
   }
+
   span {
     color: var(--primary-color);
   }
@@ -137,15 +138,24 @@ button, a {
   }
 }
 
-.main-decsr {
+.main-descr {
   margin: 0;
   font-size: 20px;
   line-height: 1.5;
   color: var(--storm-color);
   margin-top: 25px;
+
   &--home {
     color: var(--light-color);
     margin-bottom: 60px;
+
+    @include minitablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include minitablet {
+    font-size: 18px;
   }
 }
 
@@ -154,13 +164,23 @@ button, a {
   padding: 15px 40px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.4;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--light-color);
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+
+  @include minitablet {
+    padding: 13px 35px;
+    font-size: 15px;
+  }
+
+  @include mobile {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
 
   &.disabled, &:disabled {
     opacity: 0.5;

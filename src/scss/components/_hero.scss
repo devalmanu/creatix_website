@@ -1,26 +1,131 @@
 .hero {
-  position: relative;
-  padding-top: 220px;
-  padding-bottom: 355px;
-  background-color: var(--grey-color);
-  background-image:url('../img/hero-img.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 60px;
-  &:after {
-    content: '';
-    @include absolute-center;
-    background: linear-gradient(0deg, rgba(30, 33, 44, 0.60) 0%, rgba(30, 33, 44, 0.60) 100%);
-    z-index: 1;
-  }
+  padding-bottom: 60px;
 
-  &__container {
+  &__content {
     position: relative;
     z-index: 2;
-  }
-  &__content {
     max-width: 590px;
+    padding: 0 15px;
+
+    @include middledesk {
+      padding: 0;
+    }
+
+    .main-title--home {
+      @include m-tablet {
+        font-size: 45px;
+      }
+      @include mobile {
+        font-size: 33px;
+      }
+    }
+  }
+  &__next {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    z-index: 30;
+    background-color: var(--light-color);
+    transform: translateY(-50%);
+    @include middledesk {
+      display: none !important;
+    }
+  }
+
+  &__prev {
+    display: block;
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    z-index: 30;
+    background-color: var(--light-color);
+    transform: translateY(-50%);
+    @include middledesk {
+      display: none !important;
+    }
+  }
+
+  &__pag {
+    counter-reset: pag;
+    left: calc((100% - 1260px) / 2) !important;
+    bottom: 120px !important;
+    display: flex;
+
+    .swiper-pagination-bullet {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      width: 178px;
+      height: auto;
+      text-align: left;
+      background-color: transparent;
+      opacity: 1;
+
+      &::before {
+        counter-increment: pag;
+        content: "0"counter(pag);
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        color: rgba(#fff, 0.3);
+        transition: color 0.3s ease-in-out;
+
+        @include mobile {
+          font-size: 18px;
+          line-height: 1.5;
+          padding-bottom: 5px;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+
+      @include minitablet {
+        width: 25%;
+      }
+
+    }
+
+    @include middledesk {
+      left: 3% !important;
+    }
+
+    @include minidesk {
+      left: 15px !important;
+    }
+
+    @include minitablet {
+      bottom: 40px !important;
+      width: calc(100% - 30px) !important;
+    }
+
+    @include mobile {
+      bottom: 15px !important;
+    }
+  }
+
+  &__bar {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(#fff, 0.3);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--light-color);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
   }
 
   &__btns {
@@ -29,4 +134,52 @@
     gap: 24px;
   }
 
+}
+
+
+.swiper-pagination-bullet-active {
+  &::before {
+    color: var(--light-color) !important;
+  }
+
+  .hero__bar {
+    &::after {
+      transform: scaleX(1);
+      transition: transform var(--hero-slider-speed) ease-in-out;
+    }
+  }
+}
+
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-slide {
+  padding-top: 220px;
+  padding-bottom: 354px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-gray);
+  position: relative;
+  &:after {
+    content: '';
+    @include absolute-center;
+    background: linear-gradient(0deg, rgba(30, 33, 44, 0.60) 0%, rgba(30, 33, 44, 0.60) 100%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include minitablet {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @include mobile {
+    padding: 100px 0;
+  }
 }

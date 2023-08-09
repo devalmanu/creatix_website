@@ -8,6 +8,18 @@
       @include mr(35px)
     }
 
+    @include tablet {
+      display: none;
+    }
+
+    &--nav {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
     .contacts-link {
       padding-left: 53px;
       background-position: left center;
@@ -25,6 +37,28 @@
         font-weight: 400;
         line-height: 1.5;
         color: var(--grey-dark);
+        transition: color 0.3s ease-in-out;
+
+        @include minidesk {
+          font-size: 16px;
+        }
+      }
+
+      &:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        .contacts-link__value {
+          color: var(--primary-color);
+        }
+      }
+
+      &:active {
+        .contacts-link__value {
+          color: var(--color-active);
+        }
       }
 
       &--call {

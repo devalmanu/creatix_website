@@ -125,6 +125,16 @@ button, a {
   span {
     color: var(--primary-color);
   }
+
+  @include tablet {
+    font-size: 60px;
+  }
+  @include m-tablet {
+    font-size: 50px;
+  }
+  @include mobile {
+    font-size: 38px;
+  }
 }
 
 .main-decsr {
@@ -231,6 +241,16 @@ button, a {
   &--center {
     text-align: center;
   }
+
+  @include tablet {
+    font-size: 40px;
+  }
+  @include m-tablet {
+    font-size: 35px;
+  }
+  @include mobile {
+    font-size: 30px;
+  }
 }
 
 .descr {
@@ -246,68 +266,7 @@ button, a {
 }
 
 .custom-checkbox {
-  &__input {
-    opacity: 0;
-    position: absolute;
-
-    &:checked {
-
-      & + span {
-        &:before {
-          border: 1px solid var(--primary-color);
-          background-color: var(--primary-color);
-        }
-        &:after {
-          opacity: 1;
-        }
-      }
-    }
-    &:focus + span {
-      outline: none;
-    }
-  }
-
-  &__text {
-    display: inline-block;
-    position: relative;
-    padding-left: 28px;
-    color: var(--grey-color);
-    font-size: 14px;
-    line-height: 1.5;
-    &:before {
-      content: "";
-      position: absolute;
-      left: -1px;
-      top: 1px;
-      display: inline-block;
-      border: 1px solid var(--gainsboro-color);
-      border-radius: 3px;
-      background-color: var(--cultured--color);
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    &:after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      left: -1px;
-      top: 1px;
-      width: 16px;
-      height: 16px;
-      background-image: url("../img/check.svg");
-      background-position: center;
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
-      border-radius: 3px;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-
-  }
+  @include custom-checkbox;
 }
 
 .grid {
@@ -369,5 +328,39 @@ button, a {
   @include middledesk {
     right: 20px;
     bottom: 20px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  @include mobile {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.site-modal {
+  @include mobile {
+    padding: 20px;
+    padding-top: 40px;
+    width: 90%;
   }
 }

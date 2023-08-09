@@ -88,6 +88,15 @@
     font-size: 28px;
     font-weight: 700;
     line-height: 1.5;
+
+    @include m-tablet {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__field {

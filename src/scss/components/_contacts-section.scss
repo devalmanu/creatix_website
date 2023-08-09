@@ -32,6 +32,14 @@
     font-weight: 700;
     line-height: 1.5;
     margin-bottom: 4px;
+
+    @include m-tablet {
+      font-size: 26px;
+      line-height: 1.35;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__btn {

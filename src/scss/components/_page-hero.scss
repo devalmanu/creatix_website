@@ -6,8 +6,21 @@
   background-repeat: no-repeat;
   background-color: var(--cultured--color);
 
+  @include m-tablet {
+    padding-top: 120px;
+  }
+  @include mobile {
+    padding-top: 100px;
+  }
+
   &__breadcrumbs {
     margin-bottom: 40px;
+    @include m-tablet {
+      margin-bottom: 45px;
+    }
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -20,6 +33,39 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 60px;
+    }
+    @include m-tablet {
+      font-size: 50px;
+    }
+    @include mobile {
+      font-size: 38px;
+    }
+
+    &--small {
+      font-size: 64px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: initial;
+      @include m-tablet {
+        font-size: 50px;
+      }
+      @include mobile {
+        font-size: 40px;
+      }
+    }
+
+    &--mb {
+      margin-bottom: 60px;
+      @include m-tablet {
+        margin-bottom: 45px;
+      }
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__descr {
@@ -28,5 +74,10 @@
     color: var(--storm-color);
     font-size: 20px;
     line-height: 1.5;
+  }
+
+  &--work-inner {
+    background-position: right 0 top 48px;
+    background-color: var(--light-color);
   }
 }

@@ -1,6 +1,6 @@
 // Подключение свайпера
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
+Swiper.use([Navigation, Pagination, Thumbs]);
 
 const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue('--grid-gap'));
@@ -64,3 +64,42 @@ if (relatedSlider) {
     }
   });
 }
+
+const workSwiper = document.querySelector('.work-images');
+
+if(workSwiper) {
+
+  const workImagesThumbs = new Swiper(".work-images__thumb", {
+    spaceBetween: 20,
+    freeMode: true,
+    watchSlidesProgress: true,
+    slidesPerView: 3,
+    breakpoints: {
+      420: {
+        slidesPerView: 4
+      },
+      576: {
+        slidesPerView: 5
+      },
+      768: {
+        slidesPerView: 7,
+      },
+      992: {
+        slidesPerView: 'auto',
+      }
+    }
+  });
+  const workImagesMain = new Swiper(".work-images__swiper", {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: workSwiper.querySelector('.work-images__next'),
+      prevEl: workSwiper.querySelector('.work-images__prev'),
+    },
+    thumbs: {
+      swiper: workImagesThumbs,
+    },
+  });
+}
+
+

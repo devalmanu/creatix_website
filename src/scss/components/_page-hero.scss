@@ -5,12 +5,22 @@
   background-position: right -4px bottom;
   background-repeat: no-repeat;
   background-color: var(--cultured--color);
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
 
   @include m-tablet {
     padding-top: 120px;
+    min-height: 530px;
   }
   @include mobile {
     padding-top: 100px;
+    min-height: 480px;
   }
 
   &__breadcrumbs {
@@ -74,10 +84,27 @@
     color: var(--storm-color);
     font-size: 20px;
     line-height: 1.5;
+    @include minitablet {
+      font-size: 18px;
+    }
   }
 
   &--work-inner {
     background-position: right 0 top 48px;
     background-color: var(--light-color);
+  }
+
+  &__about {
+    position: relative;
+    z-index: 2;
+    &-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      @include m-tablet {
+        display: none;
+      }
+    }
   }
 }

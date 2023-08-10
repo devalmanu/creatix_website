@@ -1,6 +1,6 @@
 .header {
   padding: 23px 0 21px;
-
+  z-index: 1000;
   &__container {
     @include flex-all-sb;
   }

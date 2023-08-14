@@ -1,7 +1,7 @@
 .achieve {
   padding-top: 120px;
   padding-bottom: 120px;
-
+  overflow: hidden;
   background-position: right bottom -350px;
   background-repeat: no-repeat;
   background-color: var(--color-light);
@@ -161,6 +161,12 @@
 
       &:not(:last-child) {
         margin-bottom: 30px;
+      }
+      @include m-tablet {
+        font-size: 18px;
+      }
+      @include mobile {
+        font-size: 16px;
       }
     }
 

@@ -47,8 +47,8 @@
   &__margin {
     margin-right: -12px;
 
-    @include mobile {
-      margin-right: 0;
+    @include middledesk {
+      margin-right: 40px;
     }
   }
 }

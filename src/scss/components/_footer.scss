@@ -42,7 +42,7 @@
   &__form {
     grid-column: 5 span;
 
-    @include minitablet {
+    @include m-tablet {
       grid-column: 12 span;
     }
 
@@ -119,7 +119,7 @@
   &__btn {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    padding: 11px 19px;
+    padding: 10px 19px;
     letter-spacing: normal;
   }
 

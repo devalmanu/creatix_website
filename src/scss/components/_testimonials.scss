@@ -48,6 +48,10 @@
       right: 18px;
       bottom: 14px;
       z-index: 3;
+
+      &__btn {
+        background-color: transparent;
+      }
     }
   }
 }

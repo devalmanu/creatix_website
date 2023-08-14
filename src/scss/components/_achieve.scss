@@ -112,12 +112,14 @@
     background: var(--light-color);
 
     @include minidesk {
+      padding: 60px 62px;
       left: 0;
       top: 0;
       width: 55%;
     }
 
     @include tablet {
+      padding: 35px 25px;
       width: 100%;
     }
 
@@ -134,6 +136,14 @@
     position: relative;
     margin-bottom: 32px;
     padding: 9px 53px;
+
+    @include minidesk {
+      padding: 9px 43px;
+    }
+
+    @include tablet {
+      padding: 9px 33px;
+    }
 
     &::before {
       content: "";
@@ -187,6 +197,14 @@
     background-size: 100px 68px;
     background-repeat: no-repeat;
 
+
+    @include minidesk {
+      padding: 9px 43px;
+    }
+
+    @include tablet {
+      padding: 9px 33px 120px;
+    }
     @include mobile {
       padding-bottom: 120px;
       background-position: bottom 30px center;

@@ -141,14 +141,30 @@ if(heroSliderMain) {
 const historySlider = document.querySelector('.history-slider');
 const historyParent = historySlider?.closest('.history');
 if(historySlider) {
+  const historyBtns = document.querySelectorAll('.history-nav__btn');
+
   const history = new Swiper(historySlider, {
     slidesPerView: 1,
     spaceBetween: gap,
-    loop: true,
     navigation: {
       nextEl: historyParent.querySelector('.history-nav__next'),
       prevEl: historyParent.querySelector('.history-nav__prev'),
     },
+  });
+
+  historyBtns.forEach((el, idx) => {
+    el.setAttribute('data-index', idx);
+
+    el.addEventListener('click', (e) => {
+      const index = e.currentTarget.dataset.index;
+      historyBtns.forEach(el => {
+        el.classList.remove('history-nav__btn--active');
+      });
+
+      e.currentTarget.classList.add('history-nav__btn--active');
+
+      history.slideTo(index);
+    });
   });
 
   history.on('slideChange', function () {
@@ -161,21 +177,5 @@ if(historySlider) {
     document.querySelector(`.history-nav__btn[data-index="${history.realIndex}"]`).classList.add('history-nav__btn--active');
   });
 
-  const historyBtns = document.querySelectorAll('.history-nav__btn');
 
-  historyBtns.forEach((el, idx) => {
-    el.setAttribute('data-index', idx);
-
-    el.addEventListener('click', (e) => {
-      const index = e.currentTarget.dataset.index;
-
-      historyBtns.forEach(el => {
-        el.classList.remove('history-nav__btn--active');
-      });
-
-      e.currentTarget.classList.add('history-nav__btn--active');
-
-      history.slideTo(index + 1);
-    });
-  });
 }

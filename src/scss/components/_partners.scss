@@ -26,8 +26,20 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px 102px;
+    gap: 10px 7%;
     margin-bottom: 10px;
+    @include minidesk {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include m-tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include minitablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {

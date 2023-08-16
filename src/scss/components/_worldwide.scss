@@ -1,0 +1,13 @@
+.worldwide {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background: var(--cultured--color);
+
+  @include tablet {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+  @include mobile {
+    padding-bottom: 90px;
+  }
+}

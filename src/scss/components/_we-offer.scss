@@ -2,6 +2,15 @@
   padding: 120px 0;
   background-color: var(--color-light);
 
+  @include tablet {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  @include mobile {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
   &__container {
     @include tablet {
       display: block;

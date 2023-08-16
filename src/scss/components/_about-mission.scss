@@ -4,8 +4,14 @@
   background-color: var(--cultured--color);
 
   @include tablet {
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   &__list {
     --mission-gap: 94px;
 

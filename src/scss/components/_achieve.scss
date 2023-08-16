@@ -6,13 +6,30 @@
   background-repeat: no-repeat;
   background-color: var(--color-light);
 
+  @include tablet {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  @include mobile {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     gap: 25px 30px;
+    margin-bottom: 240px;
     @include minidesk {
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 200px;
+    }
+    @include tablet {
+      margin-bottom: 140px;
+    }
+    @include mobile {
+      margin-bottom: 100px;
     }
   }
 
@@ -84,9 +101,7 @@
     color: var(--grey-dark);
   }
 
-  &__list {
-    margin-bottom: 240px;
-  }
+
 
   &__content {
     display: flex;

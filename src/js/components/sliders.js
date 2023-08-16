@@ -146,6 +146,7 @@ if(historySlider) {
   const history = new Swiper(historySlider, {
     slidesPerView: 1,
     spaceBetween: gap,
+    autoHeight: true,
     navigation: {
       nextEl: historyParent.querySelector('.history-nav__next'),
       prevEl: historyParent.querySelector('.history-nav__prev'),

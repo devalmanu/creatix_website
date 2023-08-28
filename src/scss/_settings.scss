@@ -212,6 +212,7 @@ button, a {
       border-color: var(--light-color);
     }
     &-primary {
+      background: transparent;
       border-color: var(--primary-color);
       color: var(--primary-color);
       &:focus {

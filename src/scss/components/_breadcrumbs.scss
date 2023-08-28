@@ -22,6 +22,7 @@
     line-height: 1.5;
     color: var(--grey-color);
     transition: color 0.3s ease-in-out;
+    text-transform: capitalize;
 
     &:not([href]) {
       color: #9a9ca5;

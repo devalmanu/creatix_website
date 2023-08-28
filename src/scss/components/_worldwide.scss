@@ -10,4 +10,14 @@
   @include mobile {
     padding-bottom: 90px;
   }
+
+  &__title {
+    margin-bottom: 60px;
+    @include tablet {
+      padding-bottom: 50px;
+    }
+    @include mobile {
+      padding-bottom: 40px;
+    }
+  }
 }

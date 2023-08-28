@@ -94,6 +94,15 @@
     background-color: var(--light-color);
   }
 
+  &--positions {
+    @include minidesk {
+      background-size: 78vw;
+    }
+    @include mobile {
+      background-size: 85vw;
+    }
+  }
+
   &__about {
     position: relative;
     z-index: 2;

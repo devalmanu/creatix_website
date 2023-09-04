@@ -13,9 +13,15 @@
     &__list {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(2, 255px);
+      grid-template-rows: repeat(2, auto);
       gap: var(--grid-gap);
       margin-bottom: 40px;
+      align-items: stretch;
+      height: 100%;
+      @include tablet {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+      }
     }
 
     &__item {
@@ -25,15 +31,28 @@
       background: var(--light-color);
       box-shadow: var(--main-shadow);
       transition: box-shadow 0.3s ease-in-out;
+      @include tablet {
+        grid-column: 12 span;
+      }
       &:hover {
         box-shadow: var(--news-hover-shadow);
+        .recent-article__title a {
+          color: var(--primary-color);
+        }
       }
 
       &:first-child {
         grid-column: 7 span;
         grid-row: 2 span;
+        @include tablet {
+          grid-column: 12 span;
+          grid-row: 1 span;
+        }
       }
       &:not(:first-child) {
+        .recent-article img {
+          height: 156px;
+        }
         .recent-article__title {
           margin-bottom: 8px;
         }

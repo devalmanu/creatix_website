@@ -74,6 +74,10 @@
 
   &__item {
     grid-column: 6 span;
+    @include tablet {
+      grid-column: 12 span;
+    }
+
     &.tabs__content {
       display: none;
       &.tabs__content--active {

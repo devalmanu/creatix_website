@@ -76,7 +76,9 @@
   &__item {
     position: relative;
     color: inherit;
-
+    background-position: left center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
     &:not(:last-child) {
       margin-right: 21px;
 
@@ -92,12 +94,14 @@
       }
     }
 
-    &--comments {
+    &[datetime] {
       padding-left: 24px;
-      background-image: url("../img/comments.svg");
-      background-position: left center;
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
+      background-image: url("../img/сlock.svg");
+
+    }
+    &.article-meta__item--comments {
+      padding-left: 24px;
+      background-image: url("../img/chat.svg");
     }
   }
 }

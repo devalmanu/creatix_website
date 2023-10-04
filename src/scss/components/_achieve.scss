@@ -147,34 +147,24 @@
 .quote {
   margin: 0;
 
+  &::before {
+    left: -5px;
+    @include mobile {
+      left: 0;
+    }
+  }
+
   &__content {
     position: relative;
     margin-bottom: 32px;
-    padding: 9px 53px;
+    padding: 9px 0;
 
     @include minidesk {
-      padding: 9px 43px;
+      padding: 9px 0;
     }
 
     @include tablet {
-      padding: 9px 33px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: -5px;
-      top: 8px;
-      width: 28px;
-      height: 20px;
-      background-image: url("../img/braces.svg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      @include mobile {
-        left: 0;
-      }
+      padding: 9px 0;
     }
 
     p {
@@ -203,7 +193,7 @@
   }
 
   &__footer {
-    padding: 20px 53px;
+    padding: 20px 0;
     font-size: 14px;
     line-height: 150%;
     color: var(--storm-color);

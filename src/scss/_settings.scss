@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -7,7 +8,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
 
 body {
   margin: 0;
@@ -34,12 +34,24 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header {
+  flex: 0 0 auto;
+}
+main {
+  flex: 1 0 auto;
+}
+footer {
+  flex: 0 0 auto;
 }
 
 .is-hidden {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
+
 button, a {
   cursor: pointer;
 }
@@ -386,5 +398,26 @@ button, a {
     padding: 20px;
     padding-top: 40px;
     width: 90%;
+  }
+}
+
+blockquote {
+  position: relative;
+  padding-left: 58px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 28px;
+    height: 20px;
+    background-image: url(../img/braces.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }

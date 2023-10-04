@@ -105,6 +105,11 @@
     }
   }
 
+  &--contacts {
+    background-position: right 0 top 48px;
+    background-color: var(--light-color);
+  }
+
   &__about {
     position: relative;
     z-index: 2;

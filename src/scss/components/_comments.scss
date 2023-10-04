@@ -1,0 +1,37 @@
+.comments {
+  padding-top: 80px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    @include minidesk {
+      row-gap: 40px;
+    }
+    @include mobile {
+      row-gap: 30px;
+    }
+  }
+
+  .comment {
+    width: 100%;
+    display: flex;
+    column-gap: 30px;
+    &__left {
+      width: 150px;
+
+    }
+    &__author {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 150%;
+    }
+    &__right {
+      width: calc(100% - 180px);
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}

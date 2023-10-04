@@ -23,6 +23,7 @@ body {
 }
 
 img {
+  width: 100%;
   height: auto;
   max-width: 100%;
   object-fit: cover;
@@ -86,7 +87,9 @@ button, a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 }
-
+.container-mini {
+  max-width: var(--container-width-mini);
+}
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

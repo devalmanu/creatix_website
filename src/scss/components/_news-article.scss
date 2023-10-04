@@ -79,6 +79,7 @@
     background-position: left center;
     background-size: 16px 16px;
     background-repeat: no-repeat;
+    white-space: nowrap;
     &:not(:last-child) {
       margin-right: 21px;
 

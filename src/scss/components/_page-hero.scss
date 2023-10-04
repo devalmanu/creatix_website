@@ -78,6 +78,8 @@
     }
   }
 
+
+
   &__descr {
     margin: 0;
     max-width: 600px;
@@ -114,6 +116,48 @@
       @include m-tablet {
         display: none;
       }
+    }
+  }
+
+  &--post {
+    .page-hero__title {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: none;
+      max-width: 100%;
+      margin-bottom: 50px;
+      @include tablet {
+        font-size: 50px;
+        margin-bottom: 40px;
+      }
+      @include m-tablet {
+        font-size: 40px;
+        line-height: 1.15;
+        margin-bottom: 30px;
+      }
+      @include mobile {
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 20px;
+    .article-meta {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .social__link svg {
+      opacity: 1;
+      fill: var(--storm-color);
     }
   }
 }

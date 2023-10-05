@@ -21,7 +21,8 @@
 
 .contacts-form {
   @include flex-h-column;
-  gap: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
   padding: 48px 40px;
   max-width: 495px;
 

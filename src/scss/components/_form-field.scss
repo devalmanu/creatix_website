@@ -45,4 +45,18 @@
       width: 100%;
     }
   }
+
+  &__flex {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 22px;
+    .contacts-form__field {
+      width: calc(50% - 15px);
+
+      @include minidesk {
+        width: 100%;
+      }
+    }
+  }
 }

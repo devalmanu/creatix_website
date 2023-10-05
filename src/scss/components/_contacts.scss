@@ -1,0 +1,41 @@
+.contacts {
+  padding: 120px 0;
+
+  &__descr {
+    margin: 0;
+    color: var(--storm-color);
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__content {
+    display: flex;
+    column-gap: 11%;
+    padding-top: 60px;
+
+    @include minidesk {
+      padding-top: 40px;
+    }
+    @include mobile {
+      padding-top: 30px;
+    }
+
+  }
+
+  &__cover {
+    width: 42%;
+    img {
+      border-radius: 4px;
+    }
+  }
+  .contacts-form {
+    padding: 0;
+    max-width: inherit;
+    row-gap: 30px;
+    input {
+      padding: 13px 16px;
+      font-size: 16px;
+      height: 52px;
+    }
+  }
+}

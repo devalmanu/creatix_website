@@ -62,6 +62,17 @@
       }
     }
 
+    .custom-checkbox {
+      &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+        &::after, &::before {
+          top: 5px;
+        }
+      }
+    }
+
     .custom-radio {
       &__text {
         color: var(--grey-color);
@@ -73,6 +84,7 @@
 
     .checkbox-flex {
       flex-wrap: nowrap;
+      margin-top: 12px;
 
       @include mobile {
         flex-wrap: wrap;
@@ -81,6 +93,51 @@
 
     &__btn {
       height: min-content;
+      font-size: 16px;
+      padding: 19px 42px;
+      margin: 0 auto;
     }
   }
+
+  .choices__list--dropdown .choices__item--selectable:after {
+    display: none;
+  }
+  .choices__inner {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    height: 52px;
+    border-radius: var(--radius);
+    border: 1px solid var(--gainsboro-color);
+    background: var(--cultured--color);
+  }
+  .choices[data-type*=select-one] {
+    &:after {
+      content: url('../img/down-chevron.svg');
+      border: 0;
+      top: calc(50% - 10px);
+      right: 16.5px;
+      width: 20px;
+      height: 20px;
+      margin-top: 0;
+      transition: 0.3s ease;
+    }
+    &.is-open {
+      &:after {
+        border: 0;
+        margin-top: 0;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .choices__list--dropdown .choices__item--selectable {
+    padding-right: 10px;
+  }
+  .choices__placeholder, .choices__item--selectable {
+    color: var(--grey-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
 }
+

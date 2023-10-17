@@ -313,10 +313,6 @@ button, a {
   }
 }
 
-.custom-checkbox {
-  @include custom-checkbox;
-}
-
 .m-auto-0 {
   margin: auto 0;
 }
@@ -444,4 +440,12 @@ blockquote {
 fieldset {
   border: 0;
   padding: 0;
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+}
+
+.custom-radio {
+  @include custom-radio;
 }

@@ -14,7 +14,9 @@
     padding-top: 60px;
 
     @include minidesk {
+      column-gap: 6%;
       padding-top: 40px;
+      flex-direction: column;
     }
     @include mobile {
       padding-top: 30px;
@@ -24,18 +26,61 @@
 
   &__cover {
     width: 42%;
+
+    @include minidesk {
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
     img {
       border-radius: 4px;
+      flex-shrink: 0;
     }
   }
   .contacts-form {
     padding: 0;
     max-width: inherit;
     row-gap: 30px;
+
+    .contacts-form__radio {
+      display: flex;
+      align-items: center;
+    }
+
     input {
       padding: 13px 16px;
       font-size: 16px;
       height: 52px;
+      &.custom-radio {
+        &__input {
+          height: auto;
+          margin-right: 5px;
+
+        }
+
+      }
+    }
+
+    .custom-radio {
+      &__text {
+        color: var(--grey-color);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+    }
+
+    .checkbox-flex {
+      flex-wrap: nowrap;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__btn {
+      height: min-content;
     }
   }
 }

@@ -36,6 +36,10 @@
     &--big {
       height: 66px;
       resize: none;
+
+      &.big-message {
+        height: 128px;
+      }
     }
   }
 

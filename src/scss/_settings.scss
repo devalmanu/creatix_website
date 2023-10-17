@@ -317,6 +317,13 @@ button, a {
   @include custom-checkbox;
 }
 
+.m-auto-0 {
+  margin: auto 0;
+}
+.m-0-auto {
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -432,4 +439,9 @@ blockquote {
     background-size: cover;
     background-repeat: no-repeat;
   }
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
 }

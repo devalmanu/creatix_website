@@ -5,3 +5,4 @@ import './components/to-top.js';
 import './components/accordions.js';
 import './components/portfolio-tabs.js';
 import './components/categories-tabs.js';
+import './components/selects.js';

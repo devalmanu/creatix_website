@@ -38,10 +38,17 @@
       flex-shrink: 0;
     }
   }
+
+  .form-field__caption {
+    color: var(--grey-color);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
   .contacts-form {
     padding: 0;
     max-width: inherit;
-    row-gap: 30px;
+    row-gap: 25px;
 
     .contacts-form__radio {
       display: flex;
@@ -61,6 +68,9 @@
 
       }
     }
+    .form-field__input--big {
+      font-size: 16px;
+    }
 
     .custom-checkbox {
       &__text {
@@ -78,7 +88,7 @@
         color: var(--grey-color);
         font-size: 16px;
         font-weight: 400;
-        line-height: 1.6;
+        line-height: 1.2;
       }
     }
 
@@ -99,9 +109,18 @@
     }
   }
 
-  .choices__list--dropdown .choices__item--selectable:after {
-    display: none;
+  .choices__list--dropdown {
+    border: 1px solid #D7DADD;
+
+    .choices__item--selectable {
+      padding-right: 10px;
+
+      &:after {
+        display: none;
+      }
+    }
   }
+
   .choices__inner {
     font-size: 16px;
     font-weight: 400;
@@ -130,9 +149,7 @@
       }
     }
   }
-  .choices__list--dropdown .choices__item--selectable {
-    padding-right: 10px;
-  }
+
   .choices__placeholder, .choices__item--selectable {
     color: var(--grey-color);
     font-size: 16px;

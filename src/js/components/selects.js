@@ -6,5 +6,4 @@ selects.forEach(el => {
     position: 'bottom',
     searchEnabled: false,
   });
-
 })

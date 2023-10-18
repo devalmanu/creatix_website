@@ -320,6 +320,10 @@ button, a {
   margin: 0 auto;
 }
 
+.col-gap-25 {
+  column-gap: 25px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

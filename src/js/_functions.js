@@ -29,9 +29,9 @@ import { disableScroll } from './functions/disable-scroll';
 // Реализация включения скролла (не забудьте вызвать функцию)
 import { enableScroll } from './functions/enable-scroll';
 
-// Реализация модального окна
-import GraphModal from 'graph-modal';
-const modal = new GraphModal();
+// // Реализация модального окна
+// import GraphModal from 'graph-modal';
+// const modal = new GraphModal();
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';

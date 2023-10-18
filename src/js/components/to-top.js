@@ -1,9 +1,7 @@
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from 'smooth-scroll';
 
-const scroll = new SmoothScroll('.to-top', {
-  updateURL: true,
-});
+const scroll = new SmoothScroll('.to-top');
 const toTop = document.querySelector('.to-top');
 let heroHeight;
 
@@ -29,4 +27,3 @@ window.addEventListener('scroll', () => {
   let y = window.scrollY;
   isVisibleToTop(y);
 });
-

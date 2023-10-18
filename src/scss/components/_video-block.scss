@@ -16,6 +16,7 @@
     content: '';
     @include absolute-center;
     background-color: rgba(30, 33, 44, 0.6);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     z-index: 1;
   }
 
@@ -40,8 +41,12 @@
       height: 80px;
     }
 
-    &:focus, &:hover {
+    &:focus, &:hover, &:active {
       background: rgba(255, 90, 48, 0.1);
+    }
+    &--played {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 
@@ -63,8 +68,14 @@
       fill: var(--light-color);
     }
 
-    &:focus, &:hover {
+    &:focus, &:hover, &:active {
       background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  &--played {
+    &::before {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }

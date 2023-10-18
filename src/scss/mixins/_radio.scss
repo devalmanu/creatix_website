@@ -59,4 +59,15 @@
       transition: opacity 0.3s ease-in-out;
     }
   }
+  &__input:checked+&__text::before {
+    border-color: var(--color-primary);
+  }
+
+  &__input:checked+&__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus+&__text {
+    outline: 3px solid var(--color-primary);
+  }
 }
